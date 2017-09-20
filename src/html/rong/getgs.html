@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../less/rong/getgs.css">
+</head>
+
+<body>
+    <!-- 头部导航  -->
+    <div class="header-bar">
+        <!-- 头部导航内容  -->
+        <div class="inner">
+            <!-- 头部导航左边  -->
+            <div class="left">
+                <a href="../../../index.html"><i class="iconfont">&#xe605;</i></a>
+            </div>
+            <!-- 头部导航中间  -->
+            <div class="center">
+                <h1>凑单品</h1>
+            </div>
+            <!-- 头部导航右边  -->
+            <div class="right">
+                <a href="" class="appDl"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 单品内容  -->
+    <div class="gs-box">
+        <!-- 单品列表  -->
+        <div class="list">
+            <!-- 头部  -->
+            <div class="hd">
+                <!-- 标签名  -->
+                <div class="filter">
+                    <!-- 3个下拉标签  -->
+                    <ul class="filterUl">
+                        <li>
+                            <a href="javascript:;">京东
+                                <i class="iconfont">&#xe661;</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">华北
+                                <i class="iconfont">&#xe661;</i>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="javascript:;">全部价格
+                                <i class="iconfont">&#xe661;</i>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- 搜索图标  -->
+                <div class="search">
+                    <i class="iconfont">&#xe61e;</i>
+                </div>
+                <!-- 店铺下拉  -->
+                <div class="popsort popbox">
+                    <ul>
+                        <li>
+                            <a href="">京东</a>
+                        </li>
+                        <li>
+                            <a href="">一号店</a>
+                        </li>
+                        <li>
+                            <a href="">天猫超市</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 地区下拉  -->
+                <div class="popprice popbox">
+                    <ul>
+                        <li><a href="">华北（北京、山西等）</a></li>
+                        <li><a href="">华东（山东、浙江等）</a></li>
+                        <li><a href="">华南（广东、广西等）</a></li>
+                        <li><a href="">华中（湖北、河南等）</a></li>
+                        <li><a href="">西南（四川、云南等）</a></li>
+                        <li><a href="">东北（辽宁、吉林等）</a></li>
+                        <li><a href="">西北（宁夏、新疆等）</a></li>
+                    </ul>
+                </div>
+                <!-- 价格下拉  -->
+                <div class="popcat popbox">
+                    <ul>
+                        <li><a href="">全部价格</a></li>
+                        <li><a href="">全部价格</a></li>
+                        <li><a href="">全部价格</a></li>
+                    </ul>
+                </div>
+                <!-- 搜索框下拉  -->
+                <div class="popsearch border-bottom-img popbox">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../js/rong/getgs.js"></script>
+    <!-- <script>
+        var lis = document.querySelectorAll(".filterUl>li");
+        var ps = document.querySelector(".popsort");
+        var pp = document.querySelector(".popprice");
+        var pc = document.querySelector(".popcat");
+        var arrPop = [ps, pp, pc];
+
+
+        console.log(lis);
+        console.log(ps);
+        console.log(pp);
+        console.log(pc);
+        console.log(arrPop);
+
+        for (var i = 0; i < lis.length; i++) {
+
+            lis[i].onclick = function() {
+                var element = arrPop[i];
+                element.classList.add("on");
+                // for (var j = 0; j < arrPop.length; j++) {
+                //     arrPop[j].classList.remove("on");
+                // }
+
+                // arrPop[i].classList.add("on");
+            }
+
+        }
+    </script> -->
+
+
+</body>
+
+
+</html>

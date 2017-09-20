@@ -1,0 +1,156 @@
+@import "../common/base.less";
+
+// 头部导航
+.header-bar{
+    height: 44px;
+    background-color: #ff8b00;
+    position: relative;
+    box-shadow: 0px 2px 3px #dddddd;
+  //头部导航内容
+  .inner{
+    //头部导航左边
+    padding: 0px 8px;
+    .left{
+      position: absolute;
+      left: 18px;
+      bottom: 0px;
+      height: 44px;
+      width: 44px;
+      line-height: 44px;
+      color: #FFFFFF;
+    }
+    //头部导航中间
+    .center{
+      text-align: center;
+      >h1{
+        font-size: 20px;
+        line-height: 44px;
+        color: #ffffff;
+        font-weight: normal;
+        padding: 0px 62px;
+      }
+    }
+    //头部导航右边
+    .right{
+      position: absolute;
+      right: 8px;
+      bottom: 0px;
+      height: 44px;
+      width: 44px;
+      line-height: 44px;
+      .appDl{
+        display: block;
+        width: 100%;
+        height: 100%; 
+        background: url("../../../public/img/header_app.png") no-repeat center;
+        background-size: 36px 36px;
+      }
+    }
+  }
+}
+
+//单品内容
+.gs-box{
+  //单品列表
+  .list{
+    background-color: #fff;
+    //头部
+    .hd{
+      height: 38px;
+      border-bottom: 1px solid #ccc;
+      position: relative;     
+      //标签名
+      .filter{
+        width: 90%;
+        height: 100%;
+        overflow: hidden;
+        ul{
+            width: 100%;
+          li{
+            float: left;
+            width: 30%;
+            line-height: 37px;
+            a{
+              text-align: center;
+              font-size: 16px;
+              color:#666;
+            }
+            i{
+              display: inline-block;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      //搜索图标
+      .search{
+        height: 37px;
+        width: 46px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        border-left: 1px solid #ccc;
+        i{
+          font-style: normal;
+          font-size: 22px;
+          text-align: center;
+          line-height: 37px;
+          color: #666;
+
+        }
+      }
+      //店铺下拉,地区下拉,价格下拉,搜索框下拉
+      .popsort,.popprice,.popcat,.popsearch{
+        ul{
+          li{
+            border-bottom: 1px solid #dadada;
+            border-width: 0 0 1px 0;
+            position: relative;
+            a{
+              display: block;
+              line-height: 40px;
+              padding: 0px 10px;
+              color:#666;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//下拉菜单通用样式
+.popbox{
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0px;
+    top: 38px;
+    box-shadow: 0px 3px 6px #dddddd;
+    display: none;
+}
+
+//下拉开关样式
+.on{
+    display: block;
+    z-index: 10;
+}
+
+//字体图标
+@font-face {
+  font-family: 'iconfont';
+  src: url('../../../public/font/iconfont.eot');
+  src: url('../../../public/font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../../../public/font/iconfont.woff') format('woff'),
+  url('../../../public/font/iconfont.ttf') format('truetype'),
+  url('../../../public/font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}

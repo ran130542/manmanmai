@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="/dist/css/ran/getproduct.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/font/iconfont.css">
+</head>
+
+<body>
+  <!--header开始-->
+  <div class="header clearfix">
+    <div class="header_left">
+      <a href="http://m.manmanbuy.com/">
+        <img src="/public/img/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="header_right">
+      <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+        <img src="/public/img/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!--header结束-->
+  <!--search开始-->
+  <div class="search">
+    <div class="search-word">
+      <input type="text" name="" value="" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="search-btn">
+      <input type="button" value="搜索">
+    </div>
+  </div>
+  <!--search结束-->
+  <!--nav开始-->
+
+  <div class="nav">
+
+  </div>
+  <div class="xxx">
+
+
+
+  </div>
+  <!--比价结束-->
+  <!--网友评价开始-->
+  <div class="pj_t">
+    <div>优选网友评价</div>
+  </div>
+  <div class="yyy">
+
+  </div>
+  <div class="more">
+    <a class="morein" href="comment.aspx?id=433389">查看更多评价</a>
+  </div>
+  <!--网友评价结束-->
+  <!--bottom开始-->
+
+  <div class="bottom">
+    <div class="bottom-top">
+      <ul class="clearfix">
+        <li><a href="#">登陆</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#" id="totop"><i class="iconfont icon-jiantouxiangshang" style="font-size: 20px;
+    font-weight: 900;"></i>返回顶部</a></li>
+      </ul>
+    </div>
+    <div class="bottom-bott">
+      <p>
+        <a href="http://m.manmanbuy.com/app.html?type=footword&amp;value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>
+        <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>
+        m.manmanbuy.com
+      </p>
+    </div>
+  </div>
+
+  <!--bottom结束-->
+  <script type="text/template" id='gooddetail'>
+    <div class="detail-head">
+      <div class="pic">
+        {{@ $data[0].productImg}}
+        <a href="javascript:;"><img src="http://www.zuyushop.com/wap/images/sc.jpg"></a>
+      </div>
+      <div class="tit">{{$data[0].productName}}<span></span></div>
+      <div class="inf">
+        <ul class="clearfix">
+          <li class="price">
+            <span>当前最低</span>
+            <em>:&nbsp;<i>¥3249.00 </i></em>
+          </li>
+          <li class="comment">
+            <span>优选评论</span>
+            <em>:&nbsp;3464条</em>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--展示图结束-->
+    <!--tab开始-->
+    <div class="tab">
+      <ul class="clearfix">
+        <li class="cur"><a href="bijia.aspx?id=433389">比价购买</a></li>
+        <li class="mtab ">
+          <a href="brief.aspx?id=433389">产品参数</a></li>
+        <li class="comm"><a href="comment.aspx?id=433389">优选评价</a></li>
+      </ul>
+    </div>
+    <!--tab结束-->
+    <!--比价开始-->
+    <div class="compareprice">
+      {{@ $data[0].bjShop}}
+      <div class="note">
+        <br> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+    </div>
+
+  </script>
+  <script type="text/template" id='commenttail'>
+    {{each $data v i}}
+    <div class="pj_list">
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td class="name" align="left">{{v.comName}} </td>
+            <td align="right">{{v.comTime}}</td>
+          </tr>
+          <tr>
+            <td align="left"> <span class="star"><em class="star4"></em></span> </td>
+            <td align="right"> {{v.comFrom}} </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="pj_C">{{v.comContent}} </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=433389&amp;cid=20316111">回复</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {{/each}}
+  </script>
+  <script type="text/template" id="goodcate">
+
+    <a href="#" >首页</a>&nbsp; &gt;
+    <a href="#" >{{$data[0].category}}&nbsp;&gt;&nbsp;</a>
+    <a href="#" >{{$data[0].productName}}</a>
+
+  </script>
+  <script src="/dist/js/lib.js"></script>
+  <script src="/dist/js/ran/getproduct.js"></script>
+</body>
+
+</html>

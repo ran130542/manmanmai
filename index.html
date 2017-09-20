@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="stylesheet" href="/dist/css/index.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href='/public/font/iconfont.css'>
+</head>
+
+<body>
+  <!--header开始-->
+  <div class="header clearfix">
+    <div class="header_left">
+      <a href="http://m.manmanbuy.com/">
+        <img src="/public/img/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="header_right">
+      <a href="http://m.manmanbuy.com/app.html?type=headword&value=wap">
+        <img src="/public/img/header_app.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!--header结束-->
+<!--search开始-->
+  <div class="search">
+    <div class="search-word">
+      <input type="text" name="" value="" placeholder="请输入你想比价的商品">
+    </div>
+    <div class="search-btn">
+      <input type="button" value="搜索">
+    </div>
+  </div>
+
+  
+
+  <!--search结束-->
+
+  <!--分类开始-->
+
+  <div class="items">
+    <!--菜单栏的坑-->
+  </div>
+
+  <!--分类结束-->
+
+  <!--goodlist开始-->
+  <div class="goodlist-title clearfix">
+    <div class="goodlist-title-left">
+      <span>超值折扣推荐</span>
+    </div>
+    <div class="goodlist-title-right">
+      <img src="/public/img/more.png" alt="">
+    </div>
+  </div>
+  <div class="goodlist-content">
+    <ul>
+    <!--折扣的坑-->
+    </ul>
+  </div>
+
+  <div class="more-btn">
+    <a href="cuxiao.aspx">更多优惠信息 »</a>
+  </div>
+
+  <!--goodlist结束-->
+
+  <!--品牌排行开始-->
+
+  <div class="brand goodlist-title" style="margin-top: 10px; margin-bottom: 6px;">
+    <div class="goodlist-title-left">
+      <span>品牌排行</span>
+    </div>
+    <div class="goodlist-title-right">
+      <img src="/public/img/more.png" alt="">
+    </div>
+  </div>
+  <!--品牌排行结束-->
+
+  <!--bottom开始-->
+
+  <div class="bottom">
+    <div class="bottom-top">
+      <ul class="clearfix">
+        <li><a href="#">登陆</a></li>
+        <li><a href="#">注册</a></li>
+        <li><a href="#" id="totop">返回顶部</a></li>
+      </ul>
+    </div>
+    <div class="bottom-bott">
+      <p>
+        <a href="http://m.manmanbuy.com/app.html?type=footword&amp;value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>
+        <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>
+        m.manmanbuy.com
+      </p>
+    </div>
+  </div>
+
+  <!--bottom结束-->
+  <div class="guanggao">
+    <div style="position:fixed;right:0;bottom:60px;z-index:9">
+      <a style="width: 60px;height: 60px;display: block;" href="http://m.manmanbuy.com/app.html?type=right&amp;value=wap"><img src="https://img.alicdn.com/imgextra/i2/379516416/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png"></a>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script type="text/template" id='caidan'>
+  {{each $data v i}} 
+  {{if i%4==0}} {{if i>7}}
+  <div class='showhidden'>
+    {{/if}} {{/if}} 
+  {{@ i%4==0?'<div class="rowclass clearfix">':''}}
+      <div class="item">
+        <a href="{{i==7?'javascript:;':'http://m.manmanbuy.com/v.titlehref'}}" class='{{i==7?' morebtn ':' '}}'>
+          <div class="item-img">
+            {{#v.img}}
+          </div>
+          <div class="item-word">
+            {{v.name}}
+          </div>
+        </a>
+      </div>
+
+    {{@ ((i-3)%4==0) ?'</div>': ''}} 
+    {{if i%4==0}}
+    {{if i>8}}
+    </div>
+      {{/if}} {{/if}}
+     {{/each}}
+
+</script>
+<script type="text/template" id="zhekou">
+{{each $data v i}}
+  <li class="clearfix">
+        <a href="javascript:;">
+          <div class="goodlist-left">
+            {{@ v.productImgSm}}
+          </div>
+          <div class="goodlist-right">
+            <div class="goodlist-right-top">
+              <div class="title">
+                {{v.productName}}
+                <span>{{v.productPinkage}}</span>
+              </div>
+            </div>
+            <div class="goodlist-right-bott">
+              <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+              <span class="comment"><i class="iconfont icon-message"></i>{{v.productComCount}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+{{/each}}
+</script>
+<script src="/dist/js/lib.js"></script>
+<script src="/dist/js/index.js"></script>
